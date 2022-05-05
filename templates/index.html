@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">     <title>Food Recognition</title>
+</head>
+<body>
+<div class="container-fluid">
+    <h1>Food Recognition via Machine Learning</h1>
+    <form method="post" action="/" enctype="multipart/form-data">
+        <div class="input-group mb-3">
+            <input type="file" name="image" class="form-control" id="photoUpload">
+            <input class="btn btn-primary" type="submit" value="Submit File">
+        </div>
+    </form>
+    {% if filePath %}
+    <div class="image-display" style="height:25%; width:25%;">
+        <img class="img-fluid" src="{{ filePath }}">
+    </div>
+    {% endif %}
+    {% if modelOutput %}
+    <p class="model-output">{{ modelOutput }}</p>
+    {% endif %}
+
+    {% if nutrition_data %}
+    <table>
+        <h3>Nutritional Information per 100 grams</h3>
+        <tr>
+            <th>Protein</th>
+            <td>{{nutrition_data.Protein}}</td>
+        </tr>
+        <tr>
+            <th>Fat</th>
+            <td>{{nutrition_data.Fat}}</td>
+        </tr>
+        <tr>
+            <th>Carbs</th>
+            <td>{{nutrition_data.Carbs}}</td>
+        </tr>
+        <tr>
+            <th>Energy(kCal)</th>
+            <td>{{nutrition_data.EnergyKcal}}</td>
+        </tr>
+        <tr>
+            <th>Energy(kJ)</th>
+            <td>{{nutrition_data.EnergyKJ}}</td>
+        </tr>
+        <tr>
+                    <th>Sugars</th>
+            <td>{{nutrition_data.Sugars}}</td>
+                </tr>
+    </table>
+    {% endif %}
+
+</div>
+<footer>
+    <p>Names: Riley, Rondon, Harsh and Alex</p>
+  </footer>
+</body>
+
+</html>

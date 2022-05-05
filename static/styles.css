@@ -1,0 +1,74 @@
+
+body {
+    background-image: url(../static/onion-2699531_1920.jpg);
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #000000;
+    margin: auto;
+  }
+  h1, h3 {
+    background-color: #ffffff7c;
+    color: #000000;
+    padding: 20px;
+    margin:  20px;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+  }
+  header{
+    color: #000000;
+    background-color: #9A54AB;
+    padding: 20px;
+    margin: auto;
+  }
+
+  p {
+    color: rgb(0, 0, 0);
+
+  }
+  .image-display{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+
+.model-output{
+text-align: center;
+    background-color: white;
+
+}
+  table{
+      color: #000000 ;
+      background-color: #9A54AB;
+      margin: auto;
+      margin-bottom: 20px;
+      width: 50%;
+      border: 3px solid rgb(0, 0, 0);
+      border-radius: 2px;
+      padding: 10px;
+      border-radius: 2px;
+  }
+  footer{
+      color: #000000;
+      background-color: #9A54AB;
+      padding: 10px;
+      margin: auto;
+      width: 50%;
+      border: 3px solid rgb(0, 0, 0);
+      border-radius: 10px;
+  }
+  .output{
+    color: #000000;
+    background-color: #9A54AB;
+    padding: 20px;
+    margin-bottom: 20px;
+
+  }
+
+  .container-fluid{
+   margin: auto;
+   width: 50%;
+  }
